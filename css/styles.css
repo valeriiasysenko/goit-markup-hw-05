@@ -572,7 +572,6 @@ input{
 }
 .button-icon-footer{
     fill: #fff;
-    margin-left: 16px;
 }
 .footer-input::placeholder{
     font-family: "Roboto", sans-serif;
@@ -593,9 +592,6 @@ input{
     z-index: 999;
     opacity: 0;
     pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open{
@@ -604,16 +600,20 @@ input{
 }
 
 .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 408px;
     min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
         background: #fcfcfc;
         border-radius: 4px; 
-        padding: 24px 24px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-modal {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
 }
 
 .form-title {
@@ -623,34 +623,42 @@ input{
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
-        margin-bottom: 16px;
 }
 .icon-button{
-    display: block;
+    display: flex;
     border: none;
         width: 24px;
         height: 24px;
-        border-radius: 100%;
+        border-radius: 50%;
             fill: #e7e9fc;
-            margin-bottom: 24px;
-            margin-left: auto;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            padding: 0;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
             
 }
 .icon-button:hover{
         background-color: #404bbf;
+        border: none;
 }
-.icon-close:hover{
+.icon-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+.icon-button:hover .icon-close{
     fill: #fff;
 }
-.button-wrapper{
-    display: flex;
-    flex-direction: column;
-    
+.icon-button:focus .icon-close {
+    fill: #fff;
 }
 .icon-close{
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-container{
     display: flex;
@@ -802,6 +810,5 @@ input{
             font-weight: 400;
             font-size: 12px;
             letter-spacing: 0.04em;
-            margin-left: 3px;
-           
+            margin-left: 3px;        
 }
