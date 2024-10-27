@@ -312,14 +312,13 @@
                 <div class="footer-modal-container">
                     <p class="subscribe-title">Subscribe</p>
                     <form class="footer-modal">
-                        <label class="footer-label" for="email_footer"></label>
-                        <input class="footer-input" type="email" name="email-footer" id="email_footer" placeholder="E-mail"/>
+                        <label class="footer-label" for="email_footer"><input class="footer-input" type="email" name="email-footer" id="email_footer" placeholder="E-mail" /></label>
                         <button class="footer-button" type="submit">Subscribe<svg class="button-icon-footer" width="24" height="24"><use href="./images/icons.svg#icon-icon-send"></use></svg></button>
                     </form>
                 </div>
             </div>
         </footer>
-        <div class="modal-overlay is-open">
+        <div class="modal-overlay ">
             <div class="modal">
                 <button class="icon-button" type="button"><svg class="icon-close" width="8" height="8"><use href="./images/icons.svg#icon-close-black"></use></svg></button>
                 <p class="form-title">Leave your contacts and we will call you back</p>
@@ -350,12 +349,12 @@
                         </div>
                     </div>
                     <div class="textarea-container">
-                        <label class="textarea-text" for="comment">Comment</label>
-                        <textarea class="textarea-name" name="comment" placeholder="Text input" id="comment"></textarea>
+                        <label class="input-text" for="user-comment">Comment</label>
+                        <textarea class="textarea-name" name="user-comment" placeholder="Text input" id="user-comment"></textarea>
                     </div>
                     <div class="checkbox-container">
-                        <input class="checkbox-form visually-hidden" type="checkbox" name="privacy_policy" id="privacy_policy" value="true"/>
-                        <label class="checkbox-privacy" for="privacy_policy"><span><svg width="10" height="8" class="icon-vector"><use href="./images/icons.svg#icon-vector"></use></svg></span>I accept the terms and conditions of the <a class="text-privacy"> Privacy Policy</a></label>
+                        <input class="checkbox-form visually-hidden" type="checkbox" name="user-privacy" id="user-privacy" value="true"/>
+                        <label class="checkbox-privacy" for="user-privacy"><span class="icon-checkbox-privacy"><svg width="10" height="8" class="icon-vector"><use href="./images/icons.svg#icon-vector"></use></svg></span>I accept the terms and conditions of the <a class="text-privacy"> Privacy Policy</a></label>
                     </div>
                     <button class="button-form" type="submit">Send</button>
                 </form>
